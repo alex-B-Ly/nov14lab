@@ -10,12 +10,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <table class="table table-bordered">
+      <table class="table table-bordered table-striped">
         <tr>
           <th>First Name</th>
           <th>Last Name</th>
           <th>Email</th>
-          <th>X</th>
+          <th>Delete Row</th>
         </tr>
         <tr>
           <td>John</td>
@@ -34,14 +34,26 @@
           </td>
         </tr>
         <tr>
+          <td>Bertrand</td>
+          <td>Roberts</td>
+          <td>bertrand_the_mighty@gmail.com</td>
           <td>
-            <input id="first-name-entry" type="text">
+            <button class="btn btn-default remover">X</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input id="first-name-entry" type="text" placeholder="First Name">
           </td>
           <td>
-            <input id="last-name-entry" type="text">
+            <input id="last-name-entry" type="text" placeholder="Last Name">
           </td>
-          <td></td>
-          <td></td>
+          <td>
+            <input id="email-entry" type="text" placeholder="Email address">
+          </td>
+          <td>
+            <button id="adder" class="btn btn-default">+</button>
+          </td>
         </tr>
       </table>
     </div>
