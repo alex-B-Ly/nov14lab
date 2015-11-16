@@ -16,7 +16,32 @@ for(var i=0; i < deleteLength; i++){
 var adderButton = document.getElementById('adder');
 
 function addRow(){
-  
+  var table = document.getElementById('customer-table').children[0];
+  var firstName = document.getElementById('first-name-entry');
+  var lastName = document.getElementById('last-name-entry');
+  var email = document.getElementById('email-entry');
+
+
+  var newRow = document.createElement('tr');
+  newRow.className += 'customer';
+
+  for(var i=0; i<4; i++){
+    var td = document.createElement('td');
+
+    if(i===0){
+      td.textContent = firstName.value;
+    }if(i===1){
+      td.textContent = lastName.value;
+    }if(i===2){
+      td.textContent = email.value;
+    }
+
+    newRow.appendChild(td);
+  }
+
+  // TODO append newRow to length of table rows - 1
+    // TODO look into adding text node
+
 }
 
 adderButton.addEventListener('click', addRow);
