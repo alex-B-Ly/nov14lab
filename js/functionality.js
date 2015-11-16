@@ -16,13 +16,13 @@ for(var i=0; i < deleteLength; i++){
 var adderButton = document.getElementById('adder');
 
 function addRow(){
-  var table = document.getElementById('customer-table').children[0];
+  var table = document.getElementById('customer-table');
   var firstName = document.getElementById('first-name-entry');
   var lastName = document.getElementById('last-name-entry');
   var email = document.getElementById('email-entry');
 
 
-  var newRow = document.createElement('tr');
+  var newRow = table.insertRow();
   newRow.className += 'customer';
 
   for(var i=0; i<4; i++){
@@ -40,7 +40,6 @@ function addRow(){
   }
 
   // TODO append newRow to length of table rows - 1
-    // TODO look into adding text node
 
 }
 
