@@ -45,9 +45,15 @@ function addRow(){
     newRow.appendChild(td);
   }
 
-  // TODO append newRow to length of table rows - 1
+    (function(){
+      firstName.value = '';
+      lastName.value = '';
+      email.value = '';
+    })();
 
 }
 
 adderButton.addEventListener('click', addRow);
+
+// Random Second Add function
 
