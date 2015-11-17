@@ -20,7 +20,12 @@ function addRow(){
   var firstName = document.getElementById('first-name-entry');
   var lastName = document.getElementById('last-name-entry');
   var email = document.getElementById('email-entry');
+  var emailValue = email.value;
 
+  if(!/^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i.test(emailValue)){
+    alert('your email is not valid');
+    return;
+  }
 
   var newRow = customerTable.insertRow(customerTable.rows.length - 1);
   newRow.className += 'customer';
