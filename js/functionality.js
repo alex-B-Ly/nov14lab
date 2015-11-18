@@ -44,6 +44,8 @@ function addRow(){
 
   // check if field input values are same as other rows
 
+  var customerList = document.getElementsByClassName('customer');
+
   // create and append row content
 
   for(var i=0; i<4; i++){
@@ -80,14 +82,14 @@ adderButton.addEventListener('click', addRow);
 
 // Random Remove Row function
 
-function randomRemove(){
-  var customerTable = document.getElementById('customer-table');
+// function randomRemove(){
+//   var customerTable = document.getElementById('customer-table');
 
-  customerTable.deleteRow(1);
-}
+//   customerTable.deleteRow(1);
+// }
 
-(function(){
-  setInterval(function(){
-    randomRemove();
-  }, (Math.round(Math.random()*(10-5)+5))*1000);
-})();
+// (function(){
+//   setInterval(function(){
+//     randomRemove();
+//   }, (Math.round(Math.random()*(10-5)+5))*1000);
+// })();
